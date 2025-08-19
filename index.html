@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Band Outreach Pipeline</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Apply Inter font and improve text rendering */
+      body {
+        font-family: 'Inter', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      /* Enhanced Custom Styles from Prototype */
+      .hero-icon {
+        width: 1.25rem;
+        height: 1.25rem;
+        display: inline;
+        vertical-align: text-bottom;
+        margin-right: 0.25rem;
+      }
+      .stage-badge {
+        min-width: 2rem;
+        height: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+        font-weight: bold;
+        font-size: 0.875rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      /* Smooth animations */
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+      /* Enhanced button styles */
+      .action-btn {
+        transition: all 0.2s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .action-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+      /* Column header */
+      .column-header {
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        border-bottom: 2px solid #e5e7eb;
+      }
+      /* Status card backgrounds */
+      .status-booked {
+        background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+        border: 1px solid #a7f3d0;
+      }
+      .status-passed {
+        background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%);
+        border: 1px solid #fca5a5;
+      }
+      .status-negotiating {
+        background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);
+        border: 1px solid #fdba74;
+      }
+       /* Enhanced form styling */
+      .form-input {
+        transition: all 0.2s ease;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      .form-input:focus {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(249, 115, 22, 0.2);
+      }
+      /* Custom Scrollbar */
+      .custom-scroll::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scroll::-webkit-scrollbar-track {
+        background: #f1f5f9;
+        border-radius: 3px;
+      }
+      .custom-scroll::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 3px;
+      }
+      .custom-scroll::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+      /* Main Header */
+      .main-header {
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+      }
+       /* Pipeline Column */
+      .pipeline-column {
+        background: linear-gradient(135deg, #ffffff 0%, #fefefe 100%);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 1px 3px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e5e7eb;
+      }
+       /* Band Card */
+      .band-card {
+        background: linear-gradient(135deg, #fafafa 0%, #f8fafc 100%);
+        border: 1px solid #e2e8f0;
+      }
+      .band-card:hover {
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        border-color: #cbd5e1;
+      }
+       /* Source Tag */
+      .source-tag {
+        background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+        border: 1px solid #cbd5e1;
+      }
+      /* Research Box */
+      .research-box {
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        border: 1px solid #d1d5db;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+      }
+      /* Dev Notes */
+       .dev-notes {
+        background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+        border: 1px solid #f59e0b;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      /* Animation */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in {
+        animation: fadeInUp 0.6s ease-out forwards;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gradient-to-br from-orange-50 to-red-50">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

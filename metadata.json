@@ -1,0 +1,5 @@
+{
+  "name": "Band Outreach Pipeline",
+  "description": "A Kanban-style dashboard to manage the process of discovering, researching, and booking bands. It provides a visual pipeline to track bands from new leads to final booking outcomes.",
+  "requestFramePermissions": []
+}
